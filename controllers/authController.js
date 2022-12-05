@@ -53,7 +53,7 @@ const login = async (req, res = response ) => {
         if( !validPassword ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Password is required'
+                msg: 'La contraseña es requerida'
             });
         }
 
@@ -61,7 +61,7 @@ const login = async (req, res = response ) => {
 
         res.status(200).json({
             ok: true,
-            userDB,
+            user: userDB,
             token
         });
 
@@ -83,7 +83,7 @@ const renewToken = async (req, res = response ) => {
 
         res.status(200).json({
             ok: true,
-            userDB,
+            user: userDB,
             token
         });
 

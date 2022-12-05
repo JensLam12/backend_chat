@@ -7,9 +7,9 @@ const { validateJWT } = require('../middlewares/validateJWT');
 const router = Router();
 
 router.post( '/addUser', [
-    body('name', 'Name is required').not().isEmpty(),
-    body('email', 'Email is required').isEmail(),
-    body('password', 'Password is required').not().isEmpty(),
+    body('name', 'Nombre es requerido').not().isEmpty(),
+    body('email', 'Email es requerido').isEmail(),
+    body('password', 'La contraseña es requerido').not().isEmpty(),
     validateFields
 ], createUser);
 
